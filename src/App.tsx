@@ -192,7 +192,7 @@ const MusicPlayer = ({ isPlaying, setIsPlaying, audioRef }: { isPlaying: boolean
     <div className="fixed bottom-6 right-6 z-50">
       <button 
         onClick={togglePlay}
-        className="group relative w-12 h-12 flex items-center justify-center bg-celestial-dark/60 backdrop-blur-md rounded-full silver-border hover:scale-110 transition-transform active:scale-95"
+        className="group relative w-12 h-12 flex items-center justify-center bg-[#ff758f] hover:bg-[#ff4d6d] text-white backdrop-blur-md rounded-full shadow-[0_4px_15px_rgba(255,117,143,0.4)] hover:scale-110 border border-[#ffccd5]/50 transition-transform active:scale-95 cursor-pointer"
       >
         <AnimatePresence mode="wait">
           {isPlaying ? (
@@ -202,7 +202,7 @@ const MusicPlayer = ({ isPlaying, setIsPlaying, audioRef }: { isPlaying: boolean
               animate={{ scale: 1, rotate: 0 }}
               exit={{ scale: 0, rotate: 90 }}
             >
-              <Pause className="w-5 h-5 text-silver-bright" />
+              <Pause className="w-5 h-5 text-white" />
             </motion.div>
           ) : (
             <motion.div
@@ -211,12 +211,12 @@ const MusicPlayer = ({ isPlaying, setIsPlaying, audioRef }: { isPlaying: boolean
               animate={{ scale: 1, rotate: 0 }}
               exit={{ scale: 0, rotate: -90 }}
             >
-              <Play className="w-5 h-5 text-silver-bright fill-silver-bright" />
+              <Play className="w-5 h-5 text-white fill-white" />
             </motion.div>
           )}
         </AnimatePresence>
         {isPlaying && (
-          <div className="absolute -inset-1 rounded-full bg-silver/20 animate-ping pointer-events-none" />
+          <div className="absolute -inset-1 rounded-full bg-[#ff758f]/20 animate-ping pointer-events-none" />
         )}
       </button>
     </div>
@@ -249,12 +249,12 @@ const Countdown = () => {
 
   const Item = ({ value, label }: { value: number, label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white/5 border border-white/10">
-        <span className="text-2xl md:text-3xl font-serif-cinzel text-white font-bold">
+      <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white/90 border border-accent/40 rounded-lg shadow-md">
+        <span className="text-2xl md:text-3xl font-serif-cinzel text-[#800f2f] font-bold">
           {value.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="mt-2 text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-silver opactiy-60">
+      <span className="mt-2 text-[10px] md:text-xs font-sans uppercase tracking-[0.2em] text-[#800f2f] font-bold opacity-90">
         {label}
       </span>
     </div>
@@ -575,7 +575,18 @@ export default function App() {
         </section>
 
         {/* --- Event Details --- */}
-        <section className="py-32 px-6 max-w-6xl mx-auto space-y-24">
+        <section id="cuando-y-donde" className="py-32 px-6 max-w-6xl mx-auto space-y-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center space-y-4"
+          >
+            <span className="ornament-text">✧ ───────── ✧</span>
+            <h2 className="font-serif-cinzel text-5xl md:text-6xl text-[#800f2f] tracking-widest font-bold">¿CUÁNDO Y DÓNDE?</h2>
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-[#ff758f] font-bold">Todo sobre el gran día</p>
+          </motion.div>
+
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Main Details Card */}
             <motion.div
