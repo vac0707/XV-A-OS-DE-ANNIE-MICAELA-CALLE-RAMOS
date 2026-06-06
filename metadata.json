@@ -1,0 +1,8 @@
+{
+  "name": "XV AÑOS DE ANNIE MICAELA CALLE RAMOS",
+  "description": "Invitación virtual interactiva para el 15vo cumpleaños de Annie Micaela. Una experiencia mágica y romántica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
