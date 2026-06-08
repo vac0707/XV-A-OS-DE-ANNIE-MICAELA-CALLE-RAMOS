@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-cursive: "Great Vibes", cursive;
+  --font-cursive: "Lovely Nathalie Script", "Birthstone Bounce", "Great Vibes", cursive;
   --font-serif-cinzel: "Cinzel", serif;
   --font-serif-playfair: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
