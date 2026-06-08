@@ -4,12 +4,12 @@ import { Play, Pause, MapPin, Calendar, Clock, Shirt, Gift, ChevronLeft, Chevron
 
 // --- Constants & Data ---
 const EVENT_DATE = new Date('2026-07-04T18:00:00');
-const MUSIC_URL = "https://res.cloudinary.com/dcnynnstm/video/upload/v1779747463/CHROMATICS_GIRLS_JUST_WANNA_HAVE_SOME_Official_Video_yqea0s.mp3";
-const COVER_IMAGE = "https://res.cloudinary.com/dcnynnstm/image/upload/v1779755775/foto_x7mnyl.jpg";
+const MUSIC_URL = "https://res.cloudinary.com/dcnynnstm/video/upload/v1780948238/La_canci%C3%B3n_m%C3%A1s_hermosa_para_una_Quincea%C3%B1era_Mi_princesa_Angel_Melo_once8h.mp3";
+const COVER_IMAGE = "https://res.cloudinary.com/dcnynnstm/image/upload/v1780948304/ft_p0elei.jpg";
 const BG_PATTERN = "https://res.cloudinary.com/dcnynnstm/image/upload/v1773723965/497927484_1363051325167172_558942534762591556_n_w2cdp4.jpg";
 
 const GALLERY_IMAGES = [
-  "https://res.cloudinary.com/dcnynnstm/image/upload/v1779755775/foto_x7mnyl.jpg",
+  "https://res.cloudinary.com/dcnynnstm/image/upload/v1780948304/ft_p0elei.jpg",
   "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
   "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&auto=format&fit=crop&q=80"
 ];
@@ -420,7 +420,7 @@ export default function App() {
             <img 
               src={COVER_IMAGE} 
               alt="Annie Micaela"
-              className="w-full h-full object-cover object-center grayscale-[10%] opacity-80"
+              className="w-full h-full object-cover object-center md:object-[center_20%] grayscale-[10%] opacity-80"
             />
           </motion.div>
 
