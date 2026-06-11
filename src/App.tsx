@@ -10,8 +10,10 @@ const BG_PATTERN = "https://res.cloudinary.com/dcnynnstm/image/upload/v177372396
 
 const GALLERY_IMAGES = [
   "https://res.cloudinary.com/dcnynnstm/image/upload/v1780948304/ft_p0elei.jpg",
-  "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&auto=format&fit=crop&q=80"
+  "https://res.cloudinary.com/dcnynnstm/image/upload/v1781137231/DSC00574.jpg_tr6ag2.jpg",
+  "https://res.cloudinary.com/dcnynnstm/image/upload/v1781137232/DSC00622.jpg_mgbfzs.jpg",
+  "https://res.cloudinary.com/dcnynnstm/image/upload/v1781137232/DSC00625.jpg_obml3o.jpg",
+  "https://res.cloudinary.com/dcnynnstm/image/upload/v1781137233/DSC00583.jpg_glr6cl.jpg"
 ];
 
 // --- Sub-components ---
@@ -518,7 +520,7 @@ export default function App() {
                     <div className="space-y-2">
                         <h3 className="font-sans text-[11px] text-[#ff758f] tracking-[0.2em] uppercase font-bold">Padres</h3>
                     </div>
-                    <div className="space-y-2 font-serif-playfair text-lg md:text-xl text-[#5c0620] font-semibold leading-relaxed">
+                    <div className="space-y-3 font-cursive text-3xl md:text-4xl text-[#5c0620] leading-relaxed">
                         <p>Lili Ramos Anampa</p>
                         <p>Adimir Didi Calle Llactahuamani</p>
                     </div>
@@ -535,7 +537,7 @@ export default function App() {
                     <div className="space-y-2">
                         <h3 className="font-sans text-[11px] text-[#ff758f] tracking-[0.2em] uppercase font-bold">Padrinos</h3>
                     </div>
-                    <div className="space-y-2 font-serif-playfair text-lg md:text-xl text-[#5c0620] font-semibold leading-relaxed">
+                    <div className="space-y-3 font-cursive text-3xl md:text-4xl text-[#5c0620] leading-relaxed">
                         <p>Mario Ramos Anampa</p>
                         <p>Irene Borda Arostegui</p>
                     </div>
