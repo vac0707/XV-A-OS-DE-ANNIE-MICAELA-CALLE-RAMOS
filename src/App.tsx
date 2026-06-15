@@ -151,29 +151,7 @@ const StarBackground = () => {
         </div>
       ))}
 
-      <motion.div 
-        initial={{ opacity: 0, x: 50, y: -50 }}
-        animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        className="absolute top-10 right-10 w-32 h-32 md:w-48 md:h-48 z-1"
-      >
-        <div className="w-full h-full relative">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent via-celestial-glow to-transparent opacity-20 blur-xl" />
-          <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_15px_rgba(255,117,143,0.4)]">
-            <path 
-              d="M50 10 A40 40 0 1 0 90 50 A35 35 0 1 1 50 10 Z" 
-              fill="url(#moonGradient)"
-            />
-            <defs>
-              <linearGradient id="moonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#fff5f6" />
-                <stop offset="50%" stopColor="#ffccd5" />
-                <stop offset="100%" stopColor="#ffd3e2" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </motion.div>
+
     </div>
   );
 };
@@ -271,14 +249,13 @@ const Countdown = () => {
     </div>
   );
 };
-
 const GallerySlider = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -286,29 +263,39 @@ const GallerySlider = () => {
   const next = () => setIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
 
   return (
-    <div className="relative w-full max-w-lg mx-auto aspect-[3/4] overflow-hidden photo-frame">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={index}
-          src={GALLERY_IMAGES[index]}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover"
-          alt={`Gallery ${index}`}
-        />
-      </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-celestial-dark/60" />
+    <div className="relative w-full max-w-lg mx-auto aspect-[3/4]">
+      {/* Contenedor de la foto con sus efectos y overflow-hidden */}
+      <div className="absolute inset-0 overflow-hidden photo-frame rounded-2xl">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={index}
+            src={GALLERY_IMAGES[index]}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.8 }}
+            className="absolute inset-0 w-full h-full object-cover"
+            alt={`Gallery ${index}`}
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-celestial-dark/60" />
+      </div>
       
-      <button onClick={prev} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/30 backdrop-blur-sm silver-border text-white/70 hover:text-white transition-colors">
+      {/* Marco de flores PNG overlay - 30% más grande y saliendo de los márgenes, estirado al lado derecho */}
+      <img 
+        src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781562970/marco_de_flores_ciosew.png"
+        alt="Marco de Flores"
+        className="absolute -top-[15%] -left-[15%] w-[145%] h-[130%] object-fill pointer-events-none z-10 filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
+      />
+      
+      <button onClick={prev} className="absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/35 backdrop-blur-sm silver-border text-white/80 hover:text-white transition-colors z-20">
         <ChevronLeft className="w-6 h-6" />
       </button>
-      <button onClick={next} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/30 backdrop-blur-sm silver-border text-white/70 hover:text-white transition-colors">
+      <button onClick={next} className="absolute right-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/35 backdrop-blur-sm silver-border text-white/80 hover:text-white transition-colors z-20 flex items-center justify-center">
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {GALLERY_IMAGES.map((_, i) => (
           <div 
             key={i} 
@@ -318,7 +305,7 @@ const GallerySlider = () => {
       </div>
     </div>
   );
-};
+};;
 
 const WelcomeGate = ({ onOpen }: { onOpen: () => void }) => {
   return (
