@@ -281,11 +281,11 @@ const GallerySlider = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-celestial-dark/60" />
       </div>
       
-      {/* Marco de flores PNG overlay - 30% más grande y saliendo de los márgenes, estirado al lado derecho */}
+      {/* Marco de flores PNG overlay - Centrado perfectamente y 30% más grande */}
       <img 
-        src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781562970/marco_de_flores_ciosew.png"
+        src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781592719/MARCO_DE_FLORES_hxk7xh.png"
         alt="Marco de Flores"
-        className="absolute -top-[15%] -left-[15%] w-[145%] h-[130%] object-fill pointer-events-none z-10 filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] object-fill pointer-events-none z-10 filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
       />
       
       <button onClick={prev} className="absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/35 backdrop-blur-sm silver-border text-white/80 hover:text-white transition-colors z-20">
@@ -787,6 +787,15 @@ export default function App() {
 
       {/* Ornament Overlay */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] z-[5]" style={{ backgroundImage: `url('https://www.transparenttextures.com/patterns/black-paper.png')` }} />
+
+      {/* Decorative full invitation floral corner overlay */}
+      <div className="fixed bottom-0 right-0 pointer-events-none z-[45]">
+        <img 
+          src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781593708/FLOR_AB_gh9xza.png"
+          alt="Floral ornament"
+          className="w-[40vw] max-w-[150px] sm:max-w-[180px] md:max-w-[240px] lg:max-w-[280px] h-auto object-contain pointer-events-none"
+        />
+      </div>
     </div>
   );
 }
