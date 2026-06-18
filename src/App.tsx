@@ -283,7 +283,7 @@ const GallerySlider = () => {
       
       {/* Marco de flores PNG overlay - Centrado perfectamente y 30% más grande */}
       <img 
-        src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781592719/MARCO_DE_FLORES_hxk7xh.png"
+        src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781819812/MARCO_DE_FLORES_sifzs1.png"
         alt="Marco de Flores"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] object-fill pointer-events-none z-10 filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
       />
@@ -419,7 +419,6 @@ export default function App() {
               transition={{ delay: 0.5, duration: 1 }}
               className="flex flex-col items-center"
             >
-              <span className="ornament-text mb-2">✧ ───────── ✧</span>
               <span className="font-serif-cinzel text-[#800f2f] uppercase tracking-[0.5em] text-xs md:text-base font-bold">
                 Mis Dulces
               </span>
@@ -459,13 +458,25 @@ export default function App() {
         </section>
 
         {/* --- Poem Section --- */}
-        <section className="py-32 px-6 md:px-12 max-w-4xl mx-auto text-center relative">
+        <section className="py-32 px-6 md:px-12 max-w-4xl mx-auto text-center relative overflow-hidden">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_16_p3acpm.png" 
+            alt="Flores decorativas esquina" 
+            className="absolute top-0 left-0 w-32 md:w-52 h-auto pointer-events-none opacity-80 z-0 select-none" 
+          />
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781820222/pngwing.com_11_vynhrr.png" 
+            alt="Flores decorativas" 
+            className="absolute bottom-0 right-0 w-32 md:w-52 h-auto pointer-events-none opacity-80 z-0 select-none" 
+          />
+          
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="space-y-12"
+            className="space-y-12 relative z-10"
           >
             <div className="relative inline-block">
                 <Heart className="w-10 h-10 text-[#ff758f] mx-auto opacity-70" />
@@ -480,7 +491,19 @@ export default function App() {
 
         {/* --- Family Section --- */}
         <section className="py-32 relative overflow-hidden bg-celestial-glow/30 border-y silver-border">
-          <div className="max-w-5xl mx-auto px-6 space-y-16 text-center">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781820520/01_nl9inv.png" 
+            alt="Corona floral" 
+            className="absolute top-0 right-0 w-36 md:w-56 h-auto pointer-events-none opacity-85 z-0 select-none" 
+          />
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_15_ongokr.png" 
+            alt="Esquina floral" 
+            className="absolute bottom-0 left-0 w-36 md:w-56 h-auto pointer-events-none opacity-85 z-0 select-none" 
+          />
+          
+          <div className="max-w-5xl mx-auto px-6 space-y-16 text-center relative z-10">
             
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -492,7 +515,9 @@ export default function App() {
                 <p className="font-cursive text-4xl md:text-5xl text-[#800f2f]">
                     Tenemos el agrado de invitar a celebrar los
                 </p>
-                <h2 className="font-serif-cinzel text-5xl md:text-7xl text-shine tracking-widest font-bold">XV AÑOS</h2>
+                <h2 className="font-serif-cinzel text-5xl md:text-7xl text-shine tracking-widest font-bold">
+                  XV AÑOS
+                </h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-24 relative z-10 text-left md:text-center">
@@ -533,12 +558,19 @@ export default function App() {
         </section>
 
         {/* --- Countdown & Calendar --- */}
-        <section className="py-32 px-6 text-center space-y-20">
+        <section className="py-32 px-6 text-center space-y-20 relative overflow-hidden">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_16_p3acpm.png" 
+            alt="Detalle floral" 
+            className="absolute top-0 right-0 w-32 md:w-48 h-auto pointer-events-none opacity-80 z-0 select-none" 
+          />
+          
           <motion.div
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="space-y-10"
+             className="space-y-10 relative z-10"
           >
             <h2 className="font-serif-cinzel text-[#800f2f] text-base tracking-[0.6em] uppercase font-bold">Faltan Sólo</h2>
             <Countdown />
@@ -548,7 +580,7 @@ export default function App() {
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="relative inline-block"
+             className="relative inline-block z-10"
           >
             <div className="relative bg-white text-slate-800 p-10 md:p-14 space-y-4 rounded-sm shadow-2xl border border-accent/20">
                 <div className="font-sans text-sm tracking-[0.3em] uppercase border-b border-[#ff4d6d]/25 pb-4 mb-4 text-[#ff4d6d] font-bold">
@@ -560,22 +592,43 @@ export default function App() {
                 </div>
             </div>
           </motion.div>
+
+          {/* Centered Elegante Flower Separator */}
+          <div className="flex justify-center select-none pointer-events-none mt-12 relative z-10">
+            <img 
+              src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781820520/01_nl9inv.png" 
+              alt="Separador de flores" 
+              className="w-[180px] md:w-[240px] opacity-90 h-auto" 
+            />
+          </div>
         </section>
 
         {/* --- Event Details --- */}
-        <section id="cuando-y-donde" className="py-32 px-6 max-w-6xl mx-auto space-y-16">
+        <section id="cuando-y-donde" className="py-32 px-6 max-w-6xl mx-auto space-y-16 relative overflow-hidden">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781820222/pngwing.com_11_vynhrr.png" 
+            alt="Detalle floral esquina" 
+            className="absolute top-0 right-0 w-44 md:w-64 h-auto pointer-events-none opacity-80 z-0 select-none translate-x-4" 
+          />
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_15_ongokr.png" 
+            alt="Detalle floral esquina opuesta" 
+            className="absolute bottom-0 left-0 w-40 md:w-60 h-auto pointer-events-none opacity-80 z-0 select-none -translate-x-4" 
+          />
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center space-y-4"
+            className="text-center space-y-4 relative z-10"
           >
             <span className="ornament-text">✧ ───────── ✧</span>
             <h2 className="font-serif-cinzel text-5xl md:text-6xl text-[#800f2f] tracking-widest font-bold">¿CUÁNDO Y DÓNDE?</h2>
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-[#ff758f] font-bold">Todo sobre el gran día</p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch relative z-10">
             {/* Main Details Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -682,7 +735,13 @@ export default function App() {
         </section>
 
         {/* --- Gallery Section --- */}
-        <section className="py-32 px-6 overflow-hidden">
+        <section className="py-32 px-6 overflow-hidden relative">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_16_p3acpm.png" 
+            alt="Toque floral galería" 
+            className="absolute bottom-0 left-0 w-32 md:w-48 h-auto pointer-events-none opacity-80 z-0 select-none" 
+          />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -699,12 +758,19 @@ export default function App() {
         </section>
 
         {/* --- Footer --- */}
-        <section className="py-40 px-6 text-center space-y-16 bg-gradient-to-t from-celestial-glow/30 to-transparent">
+        <section className="py-40 px-6 text-center space-y-16 bg-gradient-to-t from-celestial-glow/30 to-transparent relative overflow-hidden">
+          {/* Decorative Flowers */}
+          <img 
+            src="https://res.cloudinary.com/dcnynnstm/image/upload/v1781821101/pngwing.com_15_ongokr.png" 
+            alt="Toque floral final" 
+            className="absolute top-0 left-0 w-32 md:w-52 h-auto pointer-events-none opacity-80 z-0 select-none" 
+          />
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-10"
+            className="space-y-10 relative z-10"
           >
             <h3 className="font-cursive text-6xl text-[#800f2f]">¡Gracias por ser parte de mi historia!</h3>
             <div className="flex items-center justify-center gap-4">
